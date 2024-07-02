@@ -3,4 +3,4 @@ Interactive Figures and Code for analysis
 
 Figure 3B
 
-{% include figs_html/performance-metrics.html %}
+{% include figs_html/figure.html %}
