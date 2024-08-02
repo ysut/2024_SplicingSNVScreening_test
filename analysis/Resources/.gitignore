@@ -1,0 +1,8 @@
+*journal
+*.db
+*.gff3.gz
+*.tbi
+*.bed.gz
+*.tsv.gz
+
+02_EstimatedLoFGenes
