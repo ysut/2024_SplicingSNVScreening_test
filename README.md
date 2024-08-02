@@ -1,9 +1,4 @@
-# 2024_SplicingSNVScreening
-Interactive Figures and Code for analysis
+## The framework for screening spicing SNVs
 
 
-Figure 3A
-{% include Figure3A.html %}
-
-Figure 3B
-{% include figure.html %}
+### Description
