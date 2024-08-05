@@ -12,14 +12,14 @@
 ## Interactive Figures in our paper
 Several figures are drawn using Plotly, allowing for interactive operations.
 
-### Figure 3A Priority Score Distribution in Validation variants set
+### Figure 3A. Priority Score Distribution in Validation variants set
 {% include Figure3A.html %}
 
-### Figure 3B Performance Meterics Comparison 
+### Figure 3B. Performance Meterics Comparison 
 {% include Figure3B.html %}
 
-### Figure S3 Results of revisited WES data
+### Figure S3. Results of revisited WES data
 {% include FigureS3.html %}
 
-### Figure S4 Final interpretations of variants in known disease-associated gene
+### Figure S4. Final interpretations of variants in known disease-associated gene
 {% include FigureS4.html %}
