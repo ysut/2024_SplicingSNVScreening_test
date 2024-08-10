@@ -28,29 +28,11 @@ def anno_same_pos_vars(row, tabixfile: pysam.pysam.libctabix.TabixFile):
     return samepos
 
 def anno_same_motif_vars(row, tabixfile: pysam.pysam.libctabix.TabixFile):
-    """ Fetch the variants within the same splicing motif from ClinVar data
-
-    Args:
-        row (_type_): _description_
-
-    Returns:
-        list: Return a list of variants registered in ClinVar 
-                within the same splicing motif (Prediction_CHROM:POS)
-    """
-    
     # Initialize result list & set common variables
     samemotifs = []
     query_chr: str = f'{row["CHROM"]}'
     query_pos: int = int(row['POS'])
 
-    ## Fixed code
-    # splai_results: dict = {float(row['DS_AG']): int(row['DP_AG']), 
-    #                        float(row['DS_AL']): int(row['DP_AL']), 
-    #                        float(row['DS_DG']): int(row['DP_DG']), 
-    #                        float(row['DS_DL']): int(row['DP_DL'])}
-    # maxsplai: float = max(splai_results.keys())
-    # maxsplai_pos: int = splai_results[maxsplai]
-    
     # Generate query positions 
     if (row['SpliceType'] == 'Donor_int' 
         or row['SpliceType'] == 'Donor_ex'):

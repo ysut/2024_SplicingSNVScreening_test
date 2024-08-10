@@ -6,8 +6,6 @@ import pysam
 from Bio.Seq import Seq
 from liftover import get_lifter
 
-
-
 ############ Functions for analysis ############
 def classifying_canonical(df: pd.DataFrame, cdot: str) -> pd.DataFrame:
    df['is_Canonical'] = 'False'
@@ -33,19 +31,8 @@ def classifying_canonical(df: pd.DataFrame, cdot: str) -> pd.DataFrame:
 
 
 ############ Functions for apply method ############
-def calc_exon_loc(row, 
-                  tabixfile: pysam.pysam.libctabix.TabixFile, 
-                  enstcolname: str):
-    """Calculate exon location from start of exon or end of exon.
-
-    Args:
-        row (pd.Series)  : _description_
-        tabixfile        : 
-        enstcolname (str): The name of ENST ID col
-
-    Returns:
-        str: "Upstream distance : Downstream distance"
-    """
+def calc_exon_loc(
+        row, tabixfile: pysam.pysam.libctabix.TabixFile, enstcolname: str): 
     query_chr: str = f"chr{row['CHROM']}"
     query_pos: int = int(row['POS'])
     query_start: int = int(query_pos) - 1
@@ -89,14 +76,6 @@ def extract_splicing_region(row):
             return 'non_SplExon'
 
 def select_donor_acceptor(row):
-    """Select Donor site or Acceptor site
-
-    Args:
-        row (pd.DataFrame): Required columns are 
-                            'Int_loc', 'ex_down_dist', and 'ex_up_dist'.
-    Returns:
-        str: 'Donor' or 'Acceptor' with 'ex' or 'int'
-    """    
     if row['Int_loc'] == 'Exonic':
         try:
             int(row['ex_down_dist'])

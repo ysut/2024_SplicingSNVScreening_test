@@ -15,7 +15,7 @@ os.environ['JOBLIB_TEMP_FOLDER'] = '/tmp'
 autoccr = '../../Resources/04_CCRs/ccrs.autosomes.v2.20180420.bed.gz'
 xccr = '../../Resources/04_CCRs/ccrs.xchrom.v2.20180420.bed.gz'
 
-canonlist = '../../Resources/01_CanonicalTranscripts/CanonicalTranscripts.exoncount.tsv'
+canonlist = 'resources/01_CanonicalTranscripts/CanonicalTranscripts.exoncount.tsv'
 canon = pd.read_table(canonlist, sep='\t', header=0)
 
 
@@ -64,7 +64,7 @@ def calc_cds_len_shorten(row):
 
 
 # Determine if the gene is included in eLoFs genes
-elofs = pd.read_table('../../Resources/02_EstimatedLoFGenes/lof_genes.txt', 
+elofs = pd.read_table('resources/02_EstimatedLoFGenes/lof_genes.txt', 
                       header=None, names=['gene'], sep='\t')
 elofs_genes = elofs['gene'].unique().tolist()
 

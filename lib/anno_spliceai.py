@@ -64,8 +64,7 @@ def anno(df: pd.DataFrame, splai: pd.DataFrame, genecol: str) -> pd.DataFrame:
     droplist = [s for s in splai.columns if isinstance(s, int)]
     df['SpliceAI'] = df.apply(_extract_splai_result, 
                               genecol=genecol, colsnum=len(droplist) ,axis=1)
-    # df = df.drop(
-    #     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ,15, 16, 17], axis=1)
+
     df = df.drop(droplist, axis=1)
     df = pd.concat([df, df['SpliceAI'].str.split('|', expand=True)], 
                     axis=1).drop(0, axis=1)
