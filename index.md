@@ -3,11 +3,13 @@
 ## Analysis note as Google colab
 
 #### Create eLoF genes
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ysut/2024_SplicingSNVScreening_test/analysis/Resources/01_CanonicalTranscripts/canonical.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/ysut/2024_SplicingSNVScreening_test/blob/main/main.ipynb)
 
 
+###  analysis note ipynb
+[text](https://colab.research.google.com/github/ysut/2024_SplicingSNVScreening_test/analysis/Resources/02_EstimatedLoFGenes/comparison5.ipynb)
  
- 
+ https://colab.research.google.com/github
  
 ## Interactive Figures in our paper
 Several figures are drawn using Plotly, allowing for interactive operations.
